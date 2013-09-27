@@ -1,0 +1,73 @@
+.group:after
+  content: ""
+  display: table
+  clear: both
+
+// Visual
+.invisible
+  visibility: hidden
+
+// Position
+.relative
+  position: relative !important
+.absolute
+  position: absolute !important
+.static
+  position: static !important
+
+// Display
+.hide
+  display: none !important
+.block
+  display: block !important
+.inline-block
+  display: inline-block !important
+.inline
+  display: inline !important
+
+// Float
+.clear
+  clear: both
+.float-l
+  float: left
+.float-r
+  float: right
+.float-n
+  float: none
+.float-list > li
+  float: left
+
+// Inline Alignment
+.align-l
+  text-align: left
+.align-c
+  text-align: center
+.align-r
+  text-align: right
+
+// Borders
+.clear-bdt
+  border-top: none !important
+.clear-bdl
+  border-left: none !important
+.clear-bdb
+  border-bottom: none !important
+.clear-bdr
+  border-right: none !important
+
+// Margins
+.center
+  margin-left: auto
+  margin-right: auto
+.clear-margin
+  margin: 0 !important
+
+@for $i from 1 to 5
+  $n: $i * 5
+  .mt#{$n}
+    margin-top: #{$n}px
+  .mb#{$n}
+    margin-bottom: #{$n}px
+  .mtb#{$n}
+    margin-top: #{$n}px
+    margin-bottom: #{$n}px

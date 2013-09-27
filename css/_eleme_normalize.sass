@@ -1,0 +1,40 @@
+/*
+ * Global Reset
+ */
+
+html
+  height: 100%
+  background: #08c
+  color: white
+  font: 14px/1.5em $sans-serif
+
+body
+  height: 100%
+  min-width: $page-width
+
+// Pointer-styled cursor on `a` whenever it has href attr. or not
+a
+  cursor: pointer
+  color: white
+  text-decoration: none
+
+// Clear list style
+ul, ol
+  list-style: none
+  padding: 0
+  margin: 0
+
+// Fix flexible media width
+img
+  max-width: 100%
+  vertical-align: middle
+
+// default icon style
+[class^="icon-"], [class*=" icon-"]
+  display: inline-block
+  vertical-align: text-bottom
+
+// centered container
+.container
+  margin-left: 0 auto
+  width: $page-width

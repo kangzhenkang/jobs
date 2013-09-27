@@ -1,0 +1,69 @@
+// group
+=group
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// box sizing
+=box-sizing($box: border-box)
+  -moz-box-sizing: $box
+  box-sizing: $box
+
+// text overflow
+=text-overflow()
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+=user-select()
+  -ms-user-select: none
+  -moz-user-select: none
+  -webkit-user-select: none
+  user-select: none
+
+=block($width, $height)
+  width: $width
+  height: $height
+  line-height: $height
+
+/*
+ * generate linear-gradient
+ */
+// generate linear-gradient
+=linear-gradient($angle, $c1, $c2, $fallback: "")
+  @if ($fallback != "")
+    background-color: rgb((red($c1) + red($c2)) / 2, (green($c1) + green($c2)) / 2, (blue($c1) + blue($c2)) / 2)
+  @else
+    @include middle-color($c1, $c2)
+  @if $angle == to bottom
+    background-image: -webkit-linear-gradient(top, $c1, $c2)
+  @else if $angle == to right
+    background-image: -webkit-linear-gradient(left, $c1, $c2)
+  background-image: linear-gradient($angle, $c1, $c2)
+
+// tansition
+=transition($transition)
+  -webkit-transition: $transition // chrome 25-
+  transition: $transition
+
+// transform
+=transform($transform, $origin: "")
+  -ms-transform: $transform
+  -webkit-transform: $transform
+  transform: $transform
+  @if $origin != ""
+    -webkit-transform-origin: $origin
+    transform-origin: $origin
+
+// animation
+=animation($animate)
+  -webkit-animation: $animate
+  animation: $animate
+
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
