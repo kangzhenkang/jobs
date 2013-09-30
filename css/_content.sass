@@ -1,0 +1,43 @@
+.site-header
+  min-width: $page-width
+  height: 70px
+  background: #42474b
+
+.logo-eleme
+  font: normal 30px/1em 'eleme'
+
+.site-nav
+  float: right
+  line-height: 70px
+.snav-link
+  display: inline-block
+  margin-right: 40px
+  font-size: 14px
+  line-height: 1.5em
+  &:hover
+    border-bottom: 1px solid #fff
+
+.header-qrcode
+  position: relative
+  float: right
+  line-height: 70px
+  &:hover
+    .header-toggle
+      border-bottom: 1px solid #fff
+    .header-dropdown
+      display: block
+.header-toggle
+  line-height: 1.5em
+  cursor: default
+.header-dropdown
+  position: absolute
+  top: 70px
+  left: -100px
+  display: none
+  width: 200px
+  background: #fff
+
+h1
+  text-shadow: 0 1px 2px rgba(#000, 0.2)
+  font: 72px/1em $sans-serif
+

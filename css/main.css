@@ -1,3 +1,56 @@
+@font-face {
+  font-family: 'eleme';
+  src: url("/fonts/eleme.eot");
+  src: url("/fonts/eleme.eot?#iefix") format("embedded-opentype"), url("/fonts/eleme.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'eleme';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="glyph-"] {
+*/
+.glyph-logo-e, .glyph-logo-l, .glyph-logo-dot, .glyph-logo-m, .glyph-logo-e-sup, .glyph-eleme {
+  font-family: 'eleme';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.glyph-logo-e:before {
+  content: "\65"; }
+
+.glyph-logo-l:before {
+  content: "\6c"; }
+
+.glyph-logo-dot:before {
+  content: "\2e"; }
+
+.glyph-logo-m:before {
+  content: "\6d"; }
+
+.glyph-logo-e-sup:before {
+  content: "\45"; }
+
+.glyph-eleme:before {
+  content: "\78"; }
+
 /* generate linear-gradient
  */
 /* normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -461,7 +514,7 @@ img {
   vertical-align: text-bottom; }
 
 .container {
-  margin-left: 0 auto;
+  margin: 0 auto;
   width: 1140px; }
 
 .group:after {
@@ -575,3 +628,48 @@ img {
 .mtb20 {
   margin-top: 20px;
   margin-bottom: 20px; }
+
+.site-header {
+  min-width: 1140px;
+  height: 70px;
+  background: #42474b; }
+
+.logo-eleme {
+  font: normal 30px/1em "eleme"; }
+
+.site-nav {
+  float: right;
+  line-height: 70px; }
+
+.snav-link {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 14px;
+  line-height: 1.5em; }
+  .snav-link:hover {
+    border-bottom: 1px solid white; }
+
+.header-qrcode {
+  position: relative;
+  float: right;
+  line-height: 70px; }
+  .header-qrcode:hover .header-toggle {
+    border-bottom: 1px solid white; }
+  .header-qrcode:hover .header-dropdown {
+    display: block; }
+
+.header-toggle {
+  line-height: 1.5em;
+  cursor: default; }
+
+.header-dropdown {
+  position: absolute;
+  top: 70px;
+  left: -100px;
+  display: none;
+  width: 200px;
+  background: white; }
+
+h1 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font: 72px/1em "Helvetica Neue", Arial, "Microsoft Yahei", sans-serif; }
