@@ -1,7 +1,42 @@
+// centered container
+.container
+  position: relative
+  margin: 0 auto
+  width: $page-width
+  height: 100%
+
+.pagination
+  margin: 80px 0 0
+  text-align: center
+.pagi-item
+  +block(18px, 18px)
+  +opacity(0.5)
+  display: inline-block
+  margin: 0 14px
+  background: #fff
+  border-radius: 50%
+  &.selected
+    +opacity(1)
+
+/*
+ * Site Header
+ */
 .site-header
-  min-width: $page-width
+  +box-sizing
+  position: fixed
+  top: 0
+  z-index: 10
+  width: 100%
   height: 70px
+  padding: 0 20px
   background: #42474b
+
+@media (max-width: $page-width + 20px) and (min-width: 700px)
+  .site-header > .container
+    width: 100%
+@media (max-width: 699px)
+  .site-header > .container
+    width: 640px
 
 .logo-eleme
   font: normal 30px/1em 'eleme'
@@ -30,14 +65,272 @@
   line-height: 1.5em
   cursor: default
 .header-dropdown
+  +box-sizing
   position: absolute
-  top: 70px
-  left: -100px
+  top: 75px
+  left: -80px
   display: none
-  width: 200px
+  width: 180px
+  padding: 20px 20px 5px
+  box-shadow: 0 1px 1px rgba(#000, 0.6)
   background: #fff
+  line-height: 1.3em
+  text-align: center
+  &:before
+    +transform(rotate(45deg) skew(-5deg, -5deg))
+    content: ""
+    position: absolute
+    top: -12px
+    left: 80px
+    width: 24px
+    height: 24px
+    background: white
+  .title
+    font-size: 18px
+    color: $blue
+  .caption
+    font-size: 14px
+    color: #b8b8b8
+
+/*
+ * Content Common
+ */
 
 h1
+  margin: 0
   text-shadow: 0 1px 2px rgba(#000, 0.2)
   font: 72px/1em $sans-serif
+
+p
+  margin: 0
+
+/*
+ * 01 index
+ */
+.main-index
+  height: 720px
+  background: $main-bg-red
+
+.main-intro
+  position: absolute
+  top: 160px
+.main-intro-block
+  float: left
+  width: 280px
+  & + &
+    margin-left: 150px
+  > .symbol-sign
+    margin: 0 5px // (280 - 270) / 2
+    width: 270px
+    height: 270px
+    border-radius: 50%
+    &.atom
+      background: #50bec4
+    &.chart
+      background: #9b5ab6
+    &.cloud
+      background: #f6ab31
+  > .intro-title
+    margin: 38px 0 22px
+    font: normal 24px/1em $sans-serif
+    text-align: center
+  > .intro-content
+    line-height: 18px
+
+/*
+ * 02 03 About
+ */
+
+.about-title
+  margin: 0 0 30px
+
+.about-content
+  font-size: 16px
+  line-height: 24px
+
+// 02 About Company
+
+.about-company
+  position: relative
+  overflow: hidden
+  min-width: $page-width
+  height: 690px
+  background-color: $main-bg-red
+  > .bg-extend
+    +box-sizing
+    position: absolute
+    top: 0
+    width: 50%
+    height: 100%
+    &.bg-left
+      left: 0
+      background: $main-bg-red
+      border-bottom: 12px solid #fff
+    &.bg-right
+      right: 0
+      background: $main-bg-blue
+      border-top: 13px solid #fff
+
+.about-company-block
+  position: absolute
+  top: 80px
+  z-index: 1
+  width: 500px
+
+.timeline-chart
+  height: 100%
+  width: 100%
+  position: absolute
+  bottom: 0
+  left: 130px
+  background: $chart-bg no-repeat bottom $main-bg-red
+
+.time-point
+  position: absolute
+  width: 2px
+  height: 63px
+  background: white
+  =position($line-bottom, $line-left, $time-bottom, $time-left)
+    bottom: $line-bottom
+    left: $line-left
+    > .time
+      bottom: $time-bottom
+      left: $time-left
+  &.point1
+    +position(93px, 103px, -35px, 10px)
+  &.point2
+    +position(146px, 252px, -36px, 13px)
+  &.point3
+    +position(193px, 409px, -33px, 19px)
+  &.point4
+    +position(289px, 540px, -42px, 19px)
+  &.point5
+    +position(337px, 669px, -40px, 26px)
+  &.future-point
+    background: transparent
+    height: 2px
+    > .time
+      font-size: 18px
+  &.point6
+    +position(425px, 806px, -44px, 31px)
+  &.point7
+    +position(524px, 958px, -51px, 41px)
+  > .time
+    position: absolute
+    font-family: verdana, sans-serif
+  > .detail-wrapper
+    position: absolute
+    bottom: 66px
+    left: -49px
+    width: 110px
+    height: 85px
+.time-point-detail
+  position: absolute
+  bottom: 0
+  > .title
+    margin: 0 0 2px
+    font-weight: normal
+    line-height: 1em
+    > .statistic
+      margin-right: 3px
+      font-weight: bold
+  > .desc
+    margin: 0
+    font: 12px/1.2em $sans-serif
+  =detail-style($margin, $statistic, $title)
+    @if $margin != 0
+      margin-left: $margin
+    > .title
+      font-size: $title
+      > .statistic
+        font-size: $statistic
+  &.detail1
+    +detail-style(20px, 24px, 14px)
+  &.detail2
+    +detail-style(10px, 22px, 16px)
+  &.detail3
+    +detail-style(10px, 26px, 18px)
+  &.detail4
+    +detail-style(0, 30px, 18px)
+  &.detail5
+    +detail-style(0, 58px, 30px)
+
+
+// 03 About Us
+
+$scard-width: 520px
+$scard-height: 142px
+$scard-mright: 100px
+$scard-mbottom: 52px
+.about-us
+  height: 800px
+  background: $main-bg-blue
+
+.about-us-block
+  padding-top: 90px
+
+.carousel-about-us
+  position: relative
+  margin-top: 85px
+  width: 100%
+  overflow: hidden
+.carousel-block
+  float: left
+  width: ($scard-width + $scard-mright) * 2
+  height: $scard-height * 2 + $scard-mbottom
+
+.staff-card
+  +box-sizing
+  float: left
+  margin: 0 ($scard-mright - 2px * 3) $scard-mbottom 2px
+  width: $scard-width
+  height: $scard-height
+  padding: 20px 18px
+  border-radius: 2px
+  background: #fff
+  box-shadow: 0 1px 3px rgba(#000, 0.3)
+  color: #666
+  line-height: 1.6em
+.staff-photo
+  float: left
+  width: 76px
+  height: 100px
+.staff-bio
+  margin-left: 76px + 15px // 76px => photo width
+  > .name
+    margin: 0 0 6px
+    font-size: 16px
+    color: #333
+    word-spacing: 8px
+
+/*
+ * 04 05 Recruitment
+ */
+
+// 04 Social Recruitment
+
+.recruitment-campus
+  background: #58b424
+
+// 05 Campus Recruitment
+
+.recruitment-social
+  background: #8743ab
+
+/*
+ * 06 FAQ
+ */
+.faq
+  background: #4eab72
+
+/*
+ * 07 Welfare
+ */
+.welfare
+  background: #f8c431
+
+/*
+ * 08 Phtowall
+ */
+//.photowall
 
