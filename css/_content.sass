@@ -6,7 +6,6 @@
   height: 100%
 
 .pagination
-  margin: 80px 0 0
   text-align: center
 .pagi-item
   +block(18px, 18px)
@@ -100,6 +99,14 @@ h1
   margin: 0
   text-shadow: 0 1px 2px rgba(#000, 0.2)
   font: 72px/1em $sans-serif
+
+h2
+  margin: 0 0 25px
+  font: normal 30px/1em $sans-serif
+
+h3
+  margin: 0 0 20px
+  font: normal 18px/1em $sans-serif
 
 p
   margin: 0
@@ -258,10 +265,10 @@ p
 
 // 03 About Us
 
-$scard-width: 520px
-$scard-height: 142px
-$scard-mright: 100px
-$scard-mbottom: 52px
+$scard-w: 520px
+$scard-h: 142px
+$scard-mh: 100px
+$scard-mv: 52px
 .about-us
   height: 800px
   background: $main-bg-blue
@@ -269,22 +276,23 @@ $scard-mbottom: 52px
 .about-us-block
   padding-top: 90px
 
-.carousel-about-us
-  position: relative
+.about-carousel
   margin-top: 85px
   width: 100%
   overflow: hidden
-.carousel-block
+  > .pagination
+    margin: 80px 0 0
+.about-carousel-block
   float: left
-  width: ($scard-width + $scard-mright) * 2
-  height: $scard-height * 2 + $scard-mbottom
+  width: ($scard-w + $scard-mh) * 2
+  height: $scard-h * 2 + $scard-mv
 
 .staff-card
   +box-sizing
   float: left
-  margin: 0 ($scard-mright - 2px * 3) $scard-mbottom 2px
-  width: $scard-width
-  height: $scard-height
+  margin: 1px ($scard-mh - 2px * 3) ($scard-mv - 1px * 1 - 3px * 2) 2px
+  width: $scard-w
+  height: $scard-h
   padding: 20px 18px
   border-radius: 2px
   background: #fff
@@ -302,35 +310,163 @@ $scard-mbottom: 52px
     font-size: 16px
     color: #333
     word-spacing: 8px
+  .mark
+    padding-bottom: 1px
+    background: none
+    border-bottom: 1px solid red
+
 
 /*
  * 04 05 Recruitment
  */
+.recruitment
+  height: 888px
+  &.campus
+    background: #58b425
+  &.social
+    background: #9c58b6
 
-// 04 Social Recruitment
+.recruit-header
+  position: relative
+  padding-top: 100px
+.recruit-title
+  float: left
+  margin-right: 25px
+.recruit-detail
+  float: right
+  margin-top: 33px // tab-item ptop 13px + tab mtop 20px
+  padding-bottom: 2px
+  font-size: 22px
+  line-height: 1em
+  &:hover
+    border-bottom: 1px solid #fff
 
-.recruitment-campus
-  background: #58b424
+.recruit-tab-nav
+  float: left
+  margin-top: 20px
+  > .tab-item
+    display: inline-block
+    padding: 13px 20px
+    font-size: 22px
+    line-height: 1em
+    &:hover
+      background: rgba(#000, 0.1)
+    &.selected
+      background: rgba(#000, 0.18)
+.recruit-tabs
+  margin-top: 50px
 
-// 05 Campus Recruitment
+$rcard-w: 550px
+$rcard-h: 235px
+$rcard-mh: 40px
+$rcard-mv: 27px
 
-.recruitment-social
-  background: #8743ab
+.recruit-carousel
+  width: 100%
+  overflow: hidden
+  padding-bottom: 50px
+  > .pagination
+    margin-top: 60px
+.recruit-carousel-block
+  float: left
+  float: left
+  width: ($rcard-w + $rcard-mh ) * 2
+  height: $rcard-h * 2 + $rcard-mv
+.job-card
+  +box-sizing
+  float: left
+  margin: 0 ($rcard-mh - 2px * 3) ($rcard-mv - 2px * 2) 2px
+  width: 550px
+  height: 235px
+  padding: 40px 30px
+  border-radius: 2px
+  box-shadow: 1px 1px 2px rgba(#000, 0.25)
+  font: 36px/1em $sans-serif
+  =styles($bg, $bg-hover, $position)
+    background: $bg
+    &:hover
+      background: $bg-hover
+    > .icon-jobs
+      background-position: $position
+  // dev
+  &.front-end
+    +styles(#ed8900, #f8a400, 0 0)
+  &.back-end
+    +styles(#e82e2f, #f63839, 0 0)
+  &.system-engineer
+    +styles(#26b1b6, #2ecdd2, 0 0)
+  &.ios-engineer
+    +styles(#aaa, #ccc, 0 0)
+  &.android-engineer
+    +styles(#999, #aaa, 0 0)
+  &.product-design
+    +styles(#3c9400, #48b000, 0 0)
+  // other
+  &.intern
+    +styles(#e5c800, #f4e100, 0 0)
+  &.bd-manager
+    +styles(#3fa7dc, #4dc5f0, 0 0)
+  &.market-service
+    +styles(#222, #555, 0 0)
+  &.customer-service
+    +styles(#da5834, #ee6a3f, 0 0)
+  &.ui-design
+    +styles(#43c879, #51e192, 0 0)
+//.icon-jobs
+
 
 /*
  * 06 FAQ
  */
 .faq
-  background: #4eab72
+  +box-sizing
+  height: 800px
+  padding-top: 75px
+  background: #16ab70
+.faq-wrapper
+  +group
+  margin-top: 80px
+.faq-article
+  float: left
+  width: 520px
+  &.social
+    margin-left: 100px
+.faq-section
+  margin-bottom: 60px
+  p, li
+    line-height: 24px
+    margin-bottom: 10px
+    color: #adffdf
+
+.faq-more
+  position: relative
+  top: -20px
+  padding-bottom: 2px
+  font-size: 16px
+  color: #057348
+  &:hover
+    border-bottom: 1px solid #057348
+
+
 
 /*
  * 07 Welfare
  */
 .welfare
-  background: #f8c431
+  height: 800px
+  background: #fac202
+.welfare-introduction
+  padding-top: 145px
+.welfare-list
+  margin: 45px 0 0
+  > li
+    font: 26px/42px $sans-serif
+
 
 /*
  * 08 Phtowall
  */
-//.photowall
+.photo-wall
+  height: 855px
+  background: #3face1
 
