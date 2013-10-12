@@ -1,0 +1,15 @@
+{
+    "strict": false,
+    "camelcase": false,
+    "quotmark": true,
+    "laxcomma": true,
+
+    "browser": true,
+    "jquery": true,
+    "globals": {
+        "Eleme": true,
+        "ELEME": true,
+        "Modernizr": true,
+        "_": true
+    }
+}

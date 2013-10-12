@@ -38,7 +38,12 @@
     width: 640px
 
 .logo-eleme
-  font: normal 30px/1em 'eleme'
+  float: left
+  width: 105px
+  height: 30px
+  margin-top: 18px
+  background: $main-sprites 0 0
+  text-indent: -9999em
 
 .site-nav
   float: right
@@ -60,6 +65,13 @@
       border-bottom: 1px solid #fff
     .header-dropdown
       display: block
+.icon-header-qr
+  width: 21px
+  height: 21px
+  padding-bottom: 4px
+  background: $main-sprites -110px 0
+  text-indent: -9999em
+  vertical-align: baseline
 .header-toggle
   line-height: 1.5em
   cursor: default
@@ -67,10 +79,10 @@
   +box-sizing
   position: absolute
   top: 75px
-  left: -80px
+  left: -63px
   display: none
-  width: 180px
-  padding: 20px 20px 5px
+  width: 144px
+  padding: 20px 15px 5px
   box-shadow: 0 1px 1px rgba(#000, 0.6)
   background: #fff
   line-height: 1.3em
@@ -80,15 +92,17 @@
     content: ""
     position: absolute
     top: -12px
-    left: 80px
+    left: 62px
     width: 24px
     height: 24px
     background: white
+  > .qr
+    margin-bottom: 5px
   .title
     font-size: 18px
     color: $blue
   .caption
-    font-size: 14px
+    font-size: 13px
     color: #b8b8b8
 
 /*
@@ -126,23 +140,35 @@ p
   width: 280px
   & + &
     margin-left: 150px
-  > .symbol-sign
-    margin: 0 5px // (280 - 270) / 2
-    width: 270px
-    height: 270px
-    border-radius: 50%
-    &.atom
-      background: #50bec4
-    &.chart
-      background: #9b5ab6
-    &.cloud
-      background: #f6ab31
   > .intro-title
     margin: 38px 0 22px
     font: normal 24px/1em $sans-serif
     text-align: center
   > .intro-content
     line-height: 18px
+.symbol-sign
+  position: relative
+  margin: 0 5px // (280 - 270) / 2
+  width: 270px
+  height: 270px
+  border-radius: 50%
+  > i
+    position: absolute
+    top: (270px - 85px) / 2
+    left: (270px - 105px) / 2
+    width: 105px
+    height: 85px
+    background: $main-sprites
+  =styles($bg, $position)
+    background: $bg
+    > i
+      background-position: $position
+  &.atom
+    +styles(#50bec4, 0 -30px)
+  &.chart
+    +styles(#9b5ab6, -110px -30px)
+  &.cloud
+    +styles(#f6ab31, -220px -30px)
 
 /*
  * 02 03 About
@@ -194,8 +220,8 @@ p
 
 .time-point
   position: absolute
-  width: 2px
-  height: 63px
+  width: 3px
+  height: 60px
   background: white
   =position($line-bottom, $line-left, $time-bottom, $time-left)
     bottom: $line-bottom
@@ -374,6 +400,7 @@ $rcard-mv: 27px
   height: $rcard-h * 2 + $rcard-mv
 .job-card
   +box-sizing
+  position: relative
   float: left
   margin: 0 ($rcard-mh - 2px * 3) ($rcard-mv - 2px * 2) 2px
   width: 550px
@@ -382,6 +409,13 @@ $rcard-mv: 27px
   border-radius: 2px
   box-shadow: 1px 1px 2px rgba(#000, 0.25)
   font: 36px/1em $sans-serif
+  > .icon-jobs
+    position: absolute
+    bottom: 10px
+    right: 20px
+    width: 110px
+    height: 85px
+    background: $main-sprites
   =styles($bg, $bg-hover, $position)
     background: $bg
     &:hover
@@ -390,30 +424,87 @@ $rcard-mv: 27px
       background-position: $position
   // dev
   &.front-end
-    +styles(#ed8900, #f8a400, 0 0)
+    +styles(#ed8900, #f8a400, 0 -120px)
   &.back-end
-    +styles(#e82e2f, #f63839, 0 0)
+    +styles(#e82e2f, #f63839, -110px -120px)
   &.system-engineer
-    +styles(#26b1b6, #2ecdd2, 0 0)
-  &.ios-engineer
-    +styles(#aaa, #ccc, 0 0)
-  &.android-engineer
-    +styles(#999, #aaa, 0 0)
+    +styles(#26b1b6, #2ecdd2, -220px -120px)
+  &.ios-developer
+    +styles(#2e77e1, #3a97f4, -330px -120px)
+  &.android-developer
+    +styles(#99d20c, #beec0f, -440px -120px)
   &.product-design
-    +styles(#3c9400, #48b000, 0 0)
+    +styles(#3c9400, #48b000, -550px -120px)
   // other
   &.intern
-    +styles(#e5c800, #f4e100, 0 0)
+    +styles(#e5c800, #f4e100, 0 -210px)
   &.bd-manager
-    +styles(#3fa7dc, #4dc5f0, 0 0)
+    +styles(#3fa7dc, #4dc5f0, -110px -210px)
   &.market-service
-    +styles(#222, #555, 0 0)
+    +styles(#0f94d7, #13b7ee, -220px -210px)
   &.customer-service
-    +styles(#da5834, #ee6a3f, 0 0)
+    +styles(#da5834, #ee6a3f, -330px -210px)
   &.ui-design
-    +styles(#43c879, #51e192, 0 0)
-//.icon-jobs
+    +styles(#43c879, #51e192, -440px -210px)
 
+// 04 Campus Recruitment
+.campus-flow
+  +group
+  width: 525px // (70 + 35) * 5
+  overflow: hidden
+.campus-flow-step
+  $line: #d9d9d9
+  +box-sizing
+  +block(70px, 70px)
+  position: relative
+  float: left
+  margin-left: 35px
+  border: 1px solid $line
+  border-radius: 50%
+  text-align: center
+  font-size: 15px
+  &:after
+    content: ""
+    position: absolute
+    top: 35px
+    left: 68px
+    width: 30px
+    height: 1px
+    background: $line
+  &:before
+    content: ""
+    position: absolute
+    top: 32px
+    left: 98px
+    width: 0
+    height: 0
+    border-left: 5px solid $line
+    border-top: 4px solid transparent
+    border-bottom: 4px solid transparent
+
+.campus-plan
+  $line: #d9d9d9
+  table-layout: fixed
+  margin-bottom: 30px
+  width: 570px
+  border: 1px solid $line
+  font-size: 16px
+  .university
+    width: 150px
+  .time
+    width: 170px
+  .city
+    padding: 11px 0
+    background: #e8e8e8
+    border: 1px solid $line
+    border-bottom: none
+    font-size: 18px
+
+.campus-qr
+  margin-top: 50px
+  text-align: center
+  font-size: 16px
+  line-height: 28px
 
 /*
  * 06 FAQ
@@ -433,10 +524,27 @@ $rcard-mv: 27px
     margin-left: 100px
 .faq-section
   margin-bottom: 60px
+  .list
+    list-style: inside decimal none
   p, li
     line-height: 24px
     margin-bottom: 10px
     color: #adffdf
+
+.faq-detail
+  margin: 0 0 40px
+  > h3
+    margin: 0 0 20px
+    font-size: 24px
+.faq-detail-section
+  margin: 0 0 25px
+  line-height: 28px
+  > h4
+    margin: 0 0 5px
+    font-size: 14px
+  > ol
+    list-style: decimal inside none
+  
 
 .faq-more
   position: relative
@@ -455,6 +563,8 @@ $rcard-mv: 27px
 .welfare
   height: 800px
   background: #fac202
+  > .container
+    background: $rocket 400px 200px
 .welfare-introduction
   padding-top: 145px
 .welfare-list
@@ -468,5 +578,5 @@ $rcard-mv: 27px
  */
 .photo-wall
   height: 855px
-  background: #3face1
+  background: $photo-wall center #3face1
 

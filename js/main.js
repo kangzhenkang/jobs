@@ -93,4 +93,20 @@ $(document).ready(function() {
     }
   });
 
+  $('#site_nav').on('click', 'a', function(event) {
+    event.preventDefault();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(target).offset().top - $('#site_header').height()
+    }, 600);
+  });
+
+  $('.jobs_list').on('click', 'a', function() {
+    var article = $(this).attr('data-detail'),
+        title = $(this).text(),
+        detail = $(article).html();
+    $('#modal_jobs_title').text(title);
+    $('#modal_jobs_detail').html(detail);
+    $('#modal_jobs').modal();
+  });
 });
