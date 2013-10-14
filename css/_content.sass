@@ -20,13 +20,14 @@
 /*
  * Site Header
  */
+$site-header-height: 50px
 .site-header
   +box-sizing
   position: fixed
   top: 0
   z-index: 10
   width: 100%
-  height: 70px
+  height: $site-header-height
   padding: 0 20px
   background: #42474b
 
@@ -41,13 +42,13 @@
   float: left
   width: 105px
   height: 30px
-  margin-top: 18px
+  margin-top: 9px
   background: $main-sprites 0 0
   text-indent: -9999em
 
 .site-nav
   float: right
-  line-height: 70px
+  line-height: $site-header-height
 .snav-link
   display: inline-block
   margin-right: 40px
@@ -59,7 +60,7 @@
 .header-qrcode
   position: relative
   float: right
-  line-height: 70px
+  line-height: $site-header-height
   &:hover
     .header-toggle
       border-bottom: 1px solid #fff
@@ -78,7 +79,7 @@
 .header-dropdown
   +box-sizing
   position: absolute
-  top: 75px
+  top: $site-header-height
   left: -63px
   display: none
   width: 144px
@@ -91,10 +92,10 @@
     +transform(rotate(45deg) skew(-5deg, -5deg))
     content: ""
     position: absolute
-    top: -12px
-    left: 62px
-    width: 24px
-    height: 24px
+    top: -5px
+    left: 69px
+    width: 10px
+    height: 10px
     background: white
   > .qr
     margin-bottom: 5px
@@ -427,11 +428,11 @@ $rcard-mv: 27px
   &.front-end
     +styles(#ed8900, #f8a400, 0 -120px)
   &.back-end
-    +styles(#e82e2f, #f63839, -110px -120px)
+    +styles(#f14440, #ff6260, -110px -120px)
   &.system-engineer
     +styles(#26b1b6, #2ecdd2, -220px -120px)
   &.ios-developer
-    +styles(#2e77e1, #3a97f4, -330px -120px)
+    +styles(#3366cc, #ec7af0, -330px -120px)
   &.android-developer
     +styles(#99d20c, #beec0f, -440px -120px)
   &.product-design
@@ -545,7 +546,7 @@ $rcard-mv: 27px
     font-size: 14px
   > ol
     list-style: decimal inside none
-  
+
 
 .faq-more
   position: relative
