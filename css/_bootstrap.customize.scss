@@ -138,12 +138,25 @@
 }
 .bs-modal-body {
   position: relative;
-  margin: 25px 20px 45px;
+  margin: 25px 20px;
   max-height: 500px;
-  padding-left: 28px;
+  padding: 0 28px 20px;
   overflow-x: hidden;
   overflow-y: auto;
+  $scrollbar-width: 8px;
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: $scrollbar-width / 2;
+    background: #d7d7d7;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scrollbar-width / 2;
+    background-color: #b9b9b9;
+  }
 }
+
 .bs-modal-footer {
   margin-top: 15px;
   padding: 19px 20px 20px;

@@ -23,13 +23,15 @@
 $site-header-height: 50px
 .site-header
   +box-sizing
-  position: fixed
+  position: absolute
   top: 0
   z-index: 10
   width: 100%
   height: $site-header-height
   padding: 0 20px
   background: #42474b
+  &.fixed
+    position: fixed
 
 @media (max-width: $page-width + 20px) and (min-width: 700px)
   .site-header > .container
@@ -129,7 +131,8 @@ p
 /*
  * 01 index
  */
-.main-index
+.about
+  position: relative
   height: 720px
   background: $main-bg-red
 
@@ -138,9 +141,9 @@ p
   top: 160px
 .main-intro-block
   float: left
-  width: 280px
+  width: 290px
   & + &
-    margin-left: 150px
+    margin-left: 135px
   > .intro-title
     margin: 38px 0 22px
     font: normal 24px/1em $sans-serif
@@ -149,7 +152,7 @@ p
     line-height: 18px
 .symbol-sign
   position: relative
-  margin: 0 5px // (280 - 270) / 2
+  margin: 0 10px // (290 - 270) / 2
   width: 270px
   height: 270px
   border-radius: 50%
@@ -432,7 +435,7 @@ $rcard-mv: 27px
   &.system-engineer
     +styles(#26b1b6, #2ecdd2, -220px -120px)
   &.ios-developer
-    +styles(#3366cc, #ec7af0, -330px -120px)
+    +styles(#3366cc, #3c7af0, -330px -120px)
   &.android-developer
     +styles(#99d20c, #beec0f, -440px -120px)
   &.product-design
@@ -449,12 +452,11 @@ $rcard-mv: 27px
   &.ui-design
     +styles(#43c879, #51e192, -440px -210px)
 
-// 04 Campus Recruitment
-.campus-flow
+.recruit-flow
   +group
   width: 525px // (70 + 35) * 5
   overflow: hidden
-.campus-flow-step
+.flow-step
   $line: #d9d9d9
   +box-sizing
   +block(70px, 70px)
@@ -483,7 +485,24 @@ $rcard-mv: 27px
     border-left: 5px solid $line
     border-top: 4px solid transparent
     border-bottom: 4px solid transparent
+.modal-qr
+  padding: 20px 0 0
+  text-align: center
+.modal-caption
+  margin-top: 5px
+  > .title
+    font-size: 16px
+  > .caption
+    font-size: 12px
+    color: #999
+.resume-to
+  padding: 20px 0 0
+  font-size: 16px
+  color: #9b9b9b
+  > a
+    color: #9b9b9b
 
+// 04 Campus Recruitment
 .campus-plan
   $line: #d9d9d9
   table-layout: fixed
@@ -501,12 +520,6 @@ $rcard-mv: 27px
     border: 1px solid $line
     border-bottom: none
     font-size: 18px
-
-.campus-qr
-  margin-top: 50px
-  text-align: center
-  font-size: 16px
-  line-height: 28px
 
 /*
  * 06 FAQ
