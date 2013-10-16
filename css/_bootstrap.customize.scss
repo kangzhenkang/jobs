@@ -1,58 +1,23 @@
-/* ========================================================================
- * Eleme Boostrap Customized Infomation
- *
- * Contains: Modal, Tooltip, Transitions
- *
- * Prefix Added to Bootstrap3 Rc2 Classnames
- * e.g.: '.modal' => '.bs-modal'
- *
- * Transition Related Classnames Remained Unchanged.
- *
- * ======================================================================== */
-
 /*
- * Bootstrap v3.0.0-rc.2
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ * customized
  */
 
-/* Transitions and Animations */
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-.fade.in {
-  opacity: 1;
-}
-.collapse {
-  display: none;
-}
-.collapse.in {
-  display: block;
-}
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
-
-
-/* Modal */
-.bs-modal-open {
-  overflow: hidden;
+body.modal-open,
+.modal-open .site-header {
   margin-right: 17px; // based on windows 7/8 scrollbar width
-  > .site-header >.container {
-    padding-right: 17px;
-  }
 }
-.bs-close {
+.modal-content {
+  margin-top: 100px;
+  background-color: #eee;
+  color: #666;
+}
+.modal-header {
+  padding: 20px 48px;
+  border-bottom: 1px solid #d7d7d7;
+  min-height: 16.428571429px;
+}
+.modal-header .close {
+  margin: 0; //reset
   position: absolute;
   right: 25px;
   top: 27px;
@@ -61,83 +26,12 @@
   background: $main-sprites -140px 0;
   text-indent: -99999em;
 }
-.bs-modal {
-  display: none;
-  overflow: auto;
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-}
-.bs-modal.fade .bs-modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-}
-.bs-modal.in .bs-modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.bs-modal-dialog {
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  padding: 10px;
-  z-index: 1050;
-}
-.bs-modal-content {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  background-color: #eee;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-  outline: none;
-  color: #666;
-}
-.bs-modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  background-color: #000000;
-}
-.bs-modal-backdrop.fade {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.bs-modal-backdrop.in {
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-}
-.bs-modal-header {
-  padding: 20px 48px;
-  border-bottom: 1px solid #d7d7d7;
-  min-height: 16.428571429px;
-}
-.bs-modal-header .bs-close {
-  margin-top: -2px;
-}
-.bs-modal-title {
-  margin: 0;
+.modal-title {
   font-size: 36px;
   line-height: 1em;
   color: #555;
 }
-.bs-modal-body {
-  position: relative;
+.modal-body {
   margin: 25px 20px;
   max-height: 500px;
   padding: 0 28px 20px;
@@ -157,44 +51,9 @@
   }
 }
 
-.bs-modal-footer {
-  margin-top: 15px;
-  padding: 19px 20px 20px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
-.bs-modal-footer:before,
-.bs-modal-footer:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.bs-modal-footer:after {
-  clear: both;
-}
-.bs-modal-footer .btn + .btn {
-  margin-left: 5px;
-  margin-bottom: 0;
-}
-.bs-modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-.bs-modal-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
 @media screen and (min-width: 768px) {
-  .bs-modal-dialog {
-    left: 50%;
-    right: auto;
+  .modal-dialog {
     width: 700px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .bs-modal-content {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -202,7 +61,7 @@
  * addition
  */
 
-.bs-modal-section {
+.modal-section {
   margin-bottom: 30px;
   > .subtitle {
     margin-bottom: 20px;
