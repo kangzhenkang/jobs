@@ -104,7 +104,9 @@ $(document).ready(function() {
   $('#site_header').on('click', 'a', function(event) {
     event.preventDefault();
     var target = $(this).attr('href');
-    history.pushState(null, null, target);
+    if (Modernizr.history) {
+      history.pushState(null, null, target);
+    }
     $('html, body').animate({
       scrollTop: target != "#about" ? $(target).offset().top - $('#site_header').height() : $(target).offset().top
     }, 600);
