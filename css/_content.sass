@@ -460,15 +460,24 @@ $rcard-mv: 27px
   +group
   width: 525px // (70 + 35) * 5
   overflow: hidden
+  &.campus > .flow-step
+    line-height: 70px
+  &.social > .flow-step
+    padding: 16px
+    line-height: 18px
+    &.middle
+      padding: 25px 16px
 .flow-step
   $line: #d9d9d9
   +box-sizing
-  +block(70px, 70px)
   position: relative
   float: left
   margin-left: 35px
+  width: 70px
+  height: 70px
   border: 1px solid $line
   border-radius: 50%
+  background: #e8e8e8
   text-align: center
   font-size: 15px
   &:after
@@ -499,12 +508,13 @@ $rcard-mv: 27px
   > .caption
     font-size: 12px
     color: #999
-.resume-to
-  padding: 20px 0 0
-  font-size: 16px
-  color: #9b9b9b
-  > a
-    color: #9b9b9b
+.btn-mail
+  display: inline-block
+  padding: 10px 35px
+  background: #438aca
+  border-radius: 5px
+  font-size: 18px
+  color: #fff
 
 // 04 Campus Recruitment
 .campus-plan
