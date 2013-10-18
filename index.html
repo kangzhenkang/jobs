@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <title>加入饿了么</title>
   <meta name="description" content="饿了么随时欢迎您的到来。" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
   <meta name="renderer" content="webkit">
   <link rel="stylesheet" href="css/main.css" />
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -19,6 +19,7 @@
 <!-- Opening Animation -->
 <div id="index" class="opening">
   <h1 class="opening-logo">ele.me 饿了么网上订餐</h1>
+  <div class="opening-arrow"></div>
 </div>
 
 <!-- Main Content -->
@@ -185,7 +186,7 @@
               <img class="staff-photo" src="img/staffs/06.jpg" alt="顾葛栋 品牌合作经理" />
               <div class="staff-bio">
                 <h5 class="name">顾葛栋 品牌合作经理</h5>
-                <p>从受尽餐厅老板的白眼到老板们青眼有加，从<mark class="mark">刚进公司只拿基本工资到奖金过万，只用了一年的时间</mark>。最后说一句，与餐厅老板“斗”，其乐无穷。</p>
+                <p>从受尽餐厅老板的白眼到老板们青睐有加，从<mark class="mark">刚进公司只拿基本工资到奖金过万，只用了一年的时间</mark>。最后说一句，与餐厅老板“斗”，其乐无穷。</p>
               </div>
             </div>
             <div class="staff-card">
@@ -196,9 +197,9 @@
               </div>
             </div>
             <div class="staff-card">
-              <img class="staff-photo" src="img/staffs/08.jpg" alt="李小芬 华东区域会计" />
+              <img class="staff-photo" src="img/staffs/08.jpg" alt="李小芬 财务主管" />
               <div class="staff-bio">
-                <h5 class="name">李小芬 华东区域会计</h5>
+                <h5 class="name">李小芬 财务主管</h5>
                 <p>这里有怀揣梦想的人，这里有努力奋斗的人，<mark class="mark">饿了么有做世界一流订餐平台的决心，也有对未来发展的无比信心</mark>！</p>
               </div>
             </div>
@@ -305,12 +306,14 @@
             <div id="carousel_social_other">
               <div class="jobs_list recruit-carousel-block">
                 <a class="job-card bd-manager" data-detail="#bd_manager">BD经理/市场拓展经理<i class="icon-jobs"></i></a>
+                <a class="job-card market-manager" data-detail="#market_manager">市场经理<i class="icon-jobs"></i></a>
                 <a class="job-card market-service" data-detail="#market_service">市场专员<i class="icon-jobs"></i></a>
                 <a class="job-card customer-service" data-detail="#customer_service">客服专员<i class="icon-jobs"></i></a>
+              </div>
+              <div class="jobs_list recruit-carousel-block">
                 <a class="job-card ui-design" data-detail="#ui_design">平面设计师<i class="icon-jobs"></i></a>
               </div>
             </div>
-            <div id="pagination_social_other" class="pagination"></div>
           </section>
         </div>
       </article>
@@ -434,7 +437,7 @@
           <div id="modal_jobs_detail" class="modal-body">
             <article id="front_end" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>在项目经理的安排下高效和高质的完成代码的编写，并确保代码符合前端规范</li>
                   <li>和设计师团队密切配合，能够实现设计师想要达到的效果</li>
@@ -443,7 +446,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>喜欢技术，喜欢折腾。有1年web前端开发经验</li>
                   <li>熟悉HTML/CSS/JavaScript，熟悉前端开发规范和W3C标准</li>
@@ -452,10 +455,16 @@
                   <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="campus_back_end" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>在项目经理的安排下高效和高质的完成功能代码的编写</li>
                   <li>与同事结对编程，相互review代码，并对其代码负责</li>
@@ -464,7 +473,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>本科及以上学历，计算机相关专业，扎实的计算机基础知识</li>
                   <li>1年以上web开发经验，至少熟悉python/php/thrift/MySQL/redis等web技术的其中一项</li>
@@ -473,10 +482,16 @@
                   <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="social_back_end" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>在项目经理的安排下高效和高质的完成功能代码的编写</li>
                   <li>与同事结对编程，相互review代码，并对其代码负责</li>
@@ -485,7 +500,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>本科及以上学历，计算机相关专业，扎实的计算机基础知识</li>
                   <li>1年以上web开发经验，熟悉python/php/thrift/MySQL/redis等web技术</li>
@@ -495,10 +510,16 @@
                   <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="system_engineer" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>负责服务器的规划，部署，对服务器基础架构和网络进行优化改进</li>
                   <li>开发运维平台工具以提升运维效率，把日常运维工作自动化</li>
@@ -506,7 +527,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>1-2年Linux/Unix系统使用经验，熟悉Linux/Unix系统管理、优化及故障处理等</li>
                   <li>熟悉两种以上的脚本语言，包括：Shell、PERL、PHP、python等</li>
@@ -514,10 +535,16 @@
                   <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种技术方案</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="ios_developer" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>在项目经理的安排下高效和高质的完成代码的编写，并确保代码符合编码规范</li>
                   <li>和设计师团队密切配合，能够帮助实现设计师想要达到的效果，并给出技术角度的设计意见和建议</li>
@@ -526,7 +553,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>喜欢Apple产品和文化，对产品有自己的认识和理解</li>
                   <li>有半年以上的Objective-C编程经验，有着良好的编码习惯和基础</li>
@@ -536,10 +563,16 @@
                   <li>善于沟通和合作，掌握源代码管理工具svn、git等</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="android_developer" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>在项目经理的安排下高效和高质的完成代码的编写，并确保代码符合编码规范</li>
                   <li>和设计师团队密切配合，能够帮助实现设计师想要达到的效果，并给出技术角度的设计意见和建议</li>
@@ -548,7 +581,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>喜欢Google的geek产品和文化，对产品有自己的认识和理解</li>
                   <li>有一年以上的Java编程经验，有着良好的编码习惯和基础</li>
@@ -559,20 +592,26 @@
                   <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="product_design" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">我们是这样理解产品设计师的：</h3>
+                <h3 class="subtitle">我们是这样理解产品设计师的</h3>
                 <ul class="desc-list">
                   <li>喜欢互联网，对各种互联网产品都了如指掌，知道改版前后</li>
                   <li>喜欢设计，喜欢上iconfans，dribbble，behance等等</li>
-                  <li>做过交互，高保真什么原型做起来毫不费劲</li>
+                  <li>做过交互，高保真原型什么的做起来毫不费劲</li>
                   <li>时间管理，好的时间管理是成功的一半</li>
                   <li>有品味，个人觉得还是挺重要的</li>
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">我们是这样的Team：</h3>
+                <h3 class="subtitle">我们是这样的Team</h3>
                 <ul class="desc-list">
                   <li>鼓励亲自参与到项目细节中，而不是一颗螺丝钉</li>
                   <li>发现好的App或者网站，我们都会一起分享讨论</li>
@@ -584,7 +623,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">饿了么UED的装备：</h3>
+                <h3 class="subtitle">饿了么UED的装备</h3>
                 <ul class="desc-list">
                   <li>Macbook Pro</li>
                   <li>Aeron座椅（很爽的椅子噢，价值8k）</li>
@@ -595,6 +634,12 @@
                 <p>如果你觉得自己就是那个人或者努力成为这样的人，我们非常欢迎投递简历给我们，也可以在这里了解我们 <a href="http://weibo.com/eued" target="_blank">@饿了么UED</a> 。</p>
                 <p>【简历投递邮箱：<a href="mailto:ued.job@ele.me">ued.job@ele.me</a>（务必附上作品）】</p>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="intern" class="job_detail hide">
               <section class="modal-section">
@@ -602,7 +647,7 @@
                 <p>我们为你提供——各部门轮岗、系统课程培训、一对一导师带教。</p>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">岗位要求：</h3>
+                <h3 class="subtitle">岗位要求</h3>
                 <ul class="desc-list">
                   <li>性别、专业不限</li>
                   <li>学历：2014年的本科毕业生（全日制）</li>
@@ -612,10 +657,16 @@
                   <li>吃苦耐劳、执行力强、善于沟通、具有团队合作精神</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="bd_manager" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>维护区域现有加盟餐饮商户，并通过各种途径开发新餐饮商户</li>
                   <li>协助新餐饮商户完成加盟以及后期销售工作</li>
@@ -625,7 +676,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>大专以上学历，市场营销以及相关专业</li>
                   <li>市场拓展能力强，具有较强的陌生拜访及挖掘客户能力</li>
@@ -634,17 +685,49 @@
                   <li>有餐饮或者O2O行业市场拓展、市场营销经验者优先考虑</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
+            </article>
+            <article id="market_manager" class="job_detail hide">
+              <section class="modal-section">
+                <h3 class="subtitle">工作职责</h3>
+                <ul class="desc-list">
+                  <li>通过市场推广，进行高校、商务楼宇、居民社区的业务拓展</li>
+                  <li>通过现场销售，提升餐饮商户的信息化管理水平</li>
+                  <li>完成公司布局全国的战略任务，成为餐饮业的淘宝网</li>
+                </ul>
+              </section>
+              <section class="modal-section">
+                <h3 class="subtitle">任职要求</h3>
+                <ul class="desc-list">
+                  <li>热爱销售行业</li>
+                  <li>勤奋、踏实，沟通能力强</li>
+                  <li>富有激情，敢于挑战压力和高薪</li>
+                  <li>简历投递请注明应聘地区</li>
+                  <li>欢迎优秀应届毕业生！</li>
+                </ul>
+              </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海、北京、广州、杭州、天津、苏州、哈尔滨、长春、深圳、福州、厦门、南京</li>
+                </ul>
+              </section>
             </article>
             <article id="market_service" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>通过市场推广，进行高校、商务楼宇、居民社区的业务拓展</li>
                   <li>完成公司布局全国的战略任务，成为餐饮业的淘宝网</li>
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>热爱销售行业</li>
                   <li>勤奋、踏实，沟通能力强</li>
@@ -653,10 +736,16 @@
                   <li>简历投递请注明应聘地区，欢迎优秀应届毕业生！</li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海、杭州</li>
+                </ul>
+              </section>
             </article>
             <article id="customer_service" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>协调餐厅处理订单，对餐厅提供简单的技术服务（公司会有专业培训）</li>
                   <li>公司内部流程处理</li>
@@ -664,7 +753,7 @@
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>年龄20～28岁，男女不限</li>
                   <li>大专及大专以上学历，通过计算机一级或有相关办公软件使用经验</li>
@@ -680,17 +769,23 @@
                   </li>
                 </ul>
               </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
             </article>
             <article id="ui_design" class="job_detail hide">
               <section class="modal-section">
-                <h3 class="subtitle">职位描述：</h3>
+                <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>LOGO设计，CI、VI策划、完善与执行，品牌形象整合，样本画册创意设计</li>
                   <li>宣传系统的整合、策划等相关设计工作</li>
                 </ul>
               </section>
               <section class="modal-section">
-                <h3 class="subtitle">任职要求：</h3>
+                <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
                   <li>年龄20～30岁，两年以上工作经验</li>
                   <li>能够熟练使用Photoshop，Illustrator等设计软件</li>
@@ -698,6 +793,12 @@
                   <li>善于沟通，思维敏捷，有较高的学习，团队合作精神</li>
                   <li>有专业艺术设计院校专科以上学历的优先</li>
                   <li>有公司网站UI的相关设计及相关工作经验的优先（注：简历中务必附上个人作品）</li>
+                </ul>
+              </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
                 </ul>
               </section>
             </article>
