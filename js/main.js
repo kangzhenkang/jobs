@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  /* init carousel */
   $('#carousel_about').carouFredSel({
     circular: false,
     infinite: false,
@@ -93,6 +94,7 @@ $(document).ready(function() {
     }
   });
 
+  /* scroll fix header */
   $(window).on('scroll', function() {
     if ($(window).scrollTop() > 800) {
       $('#site_header').addClass('fixed');
@@ -101,6 +103,7 @@ $(document).ready(function() {
     }
   });
 
+  /* fixed header navigation */
   $('#site_header').on('click', 'a', function(event) {
     event.preventDefault();
     var target = $(this).attr('href');
@@ -112,6 +115,7 @@ $(document).ready(function() {
     }, 600);
   });
 
+  /* init bootstrap modal */
   $('.jobs_list').on('click', 'a', function() {
     var article = $(this).attr('data-detail'),
         title = $(this).text();
@@ -127,4 +131,10 @@ $(document).ready(function() {
     $(detail).removeClass('hide').siblings('.recruit_detail_content').addClass('hide');
     $('#modal_recruit_detail').modal();
   });
+
+  /* content animations */
+  /*
+   * var controller = $.superscrollorama();
+   * controller.addTween('#timeline_chart', TweenMax.from());
+   */
 });
