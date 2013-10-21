@@ -133,8 +133,5 @@ $(document).ready(function() {
   });
 
   /* content animations */
-  /*
-   * var controller = $.superscrollorama();
-   * controller.addTween('#timeline_chart', TweenMax.from());
-   */
+  skrollr.init();
 });

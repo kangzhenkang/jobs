@@ -258,7 +258,7 @@ p
     font-family: verdana, sans-serif
   > .detail-wrapper
     position: absolute
-    bottom: 66px
+    top: -90px
     left: -49px
     width: 110px
     height: 85px
@@ -592,14 +592,35 @@ $rcard-mv: 27px
 .welfare
   height: 800px
   background: #fac202
-  > .container
-    background: $rocket 400px 200px
 .welfare-introduction
   padding-top: 145px
 .welfare-list
   margin: 45px 0 0
   > li
     font: 26px/42px $sans-serif
+.rockets
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 700px
+  overflow: hidden
+.rocket-l, .rocket-m, .rocket-s, .rocket-xs
+  position: absolute
+=rocket-styles($w, $h, $b, $r, $bg)
+  right: $r
+  bottom: $b
+  width: $w
+  height: $h
+  background: $bg
+.rocket-l
+  +rocket-styles(678px, 653px, -88px, 166px, $rocket-l)
+.rocket-m
+  +rocket-styles(545px, 550px, -45px, 385px, $rocket-m)
+.rocket-s
+  +rocket-styles(372px, 376px, -45px, 100px, $rocket-s)
+.rocket-xs
+  +rocket-styles(258px, 260px, -45px, 310px, $rocket-xs)
 
 
 /*
