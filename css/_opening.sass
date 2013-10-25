@@ -14,13 +14,44 @@
   height: $h
   background: $main-sprites 0px -300px
   text-indent: -9999em
+
 .opening-arrow
-  $w: 33px
-  $h: 19px
+  $w: 220px
+  +transition(opacity 0.4s ease-in-out 0s)
   position: absolute
   bottom: 25px
   left: 50%
   margin-left: -$w / 2
   width: $w
+  height: 50px
+  cursor: pointer
+  &:hover > .arrow-hint
+    opacity: 1
+.arrow-hint
+  +transition(opacity 0.4s ease-in-out 0s)
+  text-align: center
+  font-size: 13px
+  margin-bottom: 10px
+  opacity: 0
+.arrow-icon
+  $w: 33px
+  $h: 19px
+  margin: 0 auto
+  width: $w
   height: $h
   background: $main-sprites -300px -300px
+  +animation(slide-fade 2s linear 1s infinite)
+
++keyframes(slide-fade)
+  0%
+    +transform(translate(0px, 0px))
+    opacity: 1
+  20%
+    +transform(translate(0px, 10px))
+    opacity: 0
+  30%
+    +transform(translate(0px, -5px))
+    opacity: 0
+  40%
+    +transform(translate(0px, 0px))
+    opacity: 1

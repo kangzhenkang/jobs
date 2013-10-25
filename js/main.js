@@ -28,6 +28,13 @@ $(document).ready(function() {
     }, 600);
   });
 
+  /* start browse */
+  $('#start_browse').on('click', function() {
+    $('html, body').animate({
+      scrollTop: $('#about').offset().top
+    }, 600);
+  });
+
   /* init carousel */
   $('#carousel_about').carouFredSel({
     circular: false,
