@@ -147,5 +147,7 @@ $(document).ready(function() {
   });
 
   /* init skrollr */
-  skrollr.init();
+  if (!('ontouchstart' in document.documentElement)) {
+    skrollr.init();
+  }
 });
