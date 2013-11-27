@@ -46,7 +46,7 @@ $site-header-height: 50px
   width: 105px
   height: 30px
   margin-top: 9px
-  background: $main-sprites 0 0
+  background: $main-sprites -300px 0
   text-indent: -9999em
 
 .site-nav
@@ -73,7 +73,7 @@ $site-header-height: 50px
   width: 21px
   height: 21px
   padding-bottom: 4px
-  background: $main-sprites -110px 0
+  background: $main-sprites -340px -30px
   text-indent: -9999em
   vertical-align: baseline
 .header-toggle
@@ -169,11 +169,11 @@ p
     > i
       background-position: $position
   &.atom
-    +styles(#50bec4, 0 -30px)
+    +styles(#50bec4, 0 -110px)
   &.chart
-    +styles(#9b5ab6, -110px -30px)
+    +styles(#9b5ab6, -110px -110px)
   &.cloud
-    +styles(#f6ab31, -220px -30px)
+    +styles(#f6ab31, -220px -110px)
 
 /*
  * 02 03 About
@@ -433,28 +433,32 @@ $rcard-mv: 27px
       background-position: $position
   // dev
   &.front-end
-    +styles(#ed8900, #f8a400, 0 -120px)
+    +styles(#ed8900, #f8a400, 0 -200px)
   &.back-end
-    +styles(#ed6461, #f87975, -110px -120px)
+    +styles(#ed6461, #f87975, -110px -200px)
   &.android-developer
-    +styles(#99d20c, #beec0f, -220px -120px)
+    +styles(#99d20c, #beec0f, -220px -200px)
   &.ios-developer
-    +styles(#198ae0, #1ea5f1, -330px -120px)
-  &.system-engineer
-    +styles(#26b1b6, #2ecdd2, -440px -120px)
+    +styles(#198ae0, #1ea5f1, -330px -200px)
+  &.system-administrator
+    +styles(#26b1b6, #2ecdd2, -0px -290px)
+  &.data-engineer
+    +styles(#dfc324, #f3e22e, -110px -290px)
+  &.python-devops
+    +styles(#3079c8, #3e9be6, -220px -290px)
   &.product-design
-    +styles(#3c9400, #48b000, -550px -120px)
+    +styles(#3c9400, #48b000, -330px -290px)
   // other
   &.intern
-    +styles(#e5c800, #f4e100, 0 -210px)
+    +styles(#e5c800, #f4e100, 0 -380px)
   &.bd-manager, &.market-manager
-    +styles(#3fa7dc, #4dc5f0, -110px -210px)
+    +styles(#3fa7dc, #4dc5f0, -110px -380px)
   &.market-service
-    +styles(#0f94d7, #13b7ee, -220px -210px)
+    +styles(#0f94d7, #13b7ee, -220px -380px)
   &.customer-service
-    +styles(#da5834, #ee6a3f, -330px -210px)
+    +styles(#da5834, #ee6a3f, -330px -380px)
   &.ui-design
-    +styles(#43c879, #51e192, -440px -210px)
+    +styles(#43c879, #51e192, 0px -470px)
 
 .recruit-flow
   +group
