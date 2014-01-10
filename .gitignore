@@ -1,3 +1,4 @@
 css/.sass-cache
 js/vendor/superscrollorama
 js/vendor/carouFredSel
+*.pyc

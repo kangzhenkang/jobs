@@ -1,0 +1,18 @@
+from fabric.api import (
+    local,
+    env,
+    sudo,
+)
+
+import os
+
+env.use_ssh_config = True
+env.hosts = ['pg-misc-0']
+
+
+def deploy():
+    pwd = os.getcwd()
+    sudo("chown {} -R /srv/www/jobs.ele.me/".format(env.user))
+    local('rsync -az --exclude-from=rsync_exclude.conf --progress '
+          '{}/ pg-misc-0:/srv/www/jobs.ele.me/'.format(pwd))
+    sudo("chown www-data -R /srv/www/jobs.ele.me/")
