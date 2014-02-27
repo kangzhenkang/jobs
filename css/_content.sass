@@ -244,13 +244,13 @@ p
     +position(289px, 540px, -42px, 19px)
   &.point5
     +position(337px, 669px, -40px, 26px)
+  &.point6
+    +position(425px, 806px, -44px, 31px)
   &.future-point
     background: transparent
     height: 2px
     > .time
       font-size: 18px
-  &.point6
-    +position(425px, 806px, -44px, 31px)
   &.point7
     +position(524px, 958px, -51px, 41px)
   > .time
@@ -263,6 +263,13 @@ p
     width: 110px
     height: 85px
 .time-point-detail
+  =detail-style($margin, $statistic, $title)
+    @if $margin != 0
+      margin-left: $margin
+    > .title
+      font-size: $title
+      > .statistic
+        font-size: $statistic
   position: absolute
   bottom: 0
   > .title
@@ -275,13 +282,6 @@ p
   > .desc
     margin: 0
     font: 12px/1.2em $sans-serif
-  =detail-style($margin, $statistic, $title)
-    @if $margin != 0
-      margin-left: $margin
-    > .title
-      font-size: $title
-      > .statistic
-        font-size: $statistic
   &.detail1
     +detail-style(20px, 24px, 14px)
   &.detail2
@@ -291,7 +291,9 @@ p
   &.detail4
     +detail-style(0, 30px, 18px)
   &.detail5
-    +detail-style(0, 58px, 30px)
+    +detail-style(0, 45px, 18px)
+  &.detail6
+    +detail-style(10px, 58px, 20px)
 
 
 // 03 About Us
