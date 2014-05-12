@@ -9,7 +9,7 @@
   <meta name="description" content="饿了么随时欢迎您的到来。" />
   <meta name="viewport" content="width=device-width" />
   <meta name="renderer" content="webkit">
-  <link rel="stylesheet" href="css/main.css?v=6" />
+  <link rel="stylesheet" href="css/main.css?v=7" />
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -18,20 +18,20 @@
   <![endif]-->
 
 <!-- Opening Animation -->
-<div id="index" class="opening">
-  <script type="text/javascript">
-    if (window.innerHeight) {
-      document.getElementById('index').style.height = window.innerHeight + 'px';
-    } else {
-      document.getElementById('index').style.height = document.documentElement.clientHeight + 'px';
-    }
-  </script>
-  <h1 class="opening-logo">ele.me 饿了么网上订餐</h1>
-  <div id="start_browse" class="opening-arrow" data-0="opacity:1;" data-200="opacity:0;">
-    <p class="arrow-hint">滑动以继续</p>
-    <div class="arrow-icon"></div>
+  <div id="index" class="opening">
+    <script type="text/javascript">
+      if (window.innerHeight) {
+        document.getElementById('index').style.height = window.innerHeight + 'px';
+      } else {
+        document.getElementById('index').style.height = document.documentElement.clientHeight + 'px';
+      }
+    </script>
+    <h1 class="opening-logo">ele.me 饿了么网上订餐</h1>
+    <div id="start_browse" class="opening-arrow" data-0="opacity:1;" data-200="opacity:0;">
+      <p class="arrow-hint">滑动以继续</p>
+      <div class="arrow-icon"></div>
+    </div>
   </div>
-</div>
 
 <!-- Main Content -->
   <!-- About -->
@@ -257,92 +257,38 @@
     </div>
   </section>
 
-  <!-- Campus Recruitment -->
-  <section id="recruitment" class="recruitment campus">
+  <section class="recruitment">
     <div class="container">
       <header class="recruit-header group">
-        <h1 class="recruit-title">校园招聘</h1>
-        <nav id="tab_nav_campus" class="recruit-tab-nav"></nav>
-        <a class="recruit-detail recruit_detail" data-detail="#campus_detail">2014年校招时间和地点 &gt;&gt;</a>
-      </header>
-      <article class="recruit-tabs">
-        <div id="tab_campus">
-          <section class="recruit-carousel" data-categ="技术类">
-            <div id="carousel_campus_dev">
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card front-end" data-detail="#front_end">Web前端开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card back-end" data-detail="#campus_back_end">Web后端开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card android-developer" data-detail="#android_developer">Android开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card ios-developer" data-detail="#ios_developer">iOS开发工程师<i class="icon-jobs"></i></a>
-              </div>
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card system-administrator" data-detail="#system_administrator">运维工程师<i class="icon-jobs"></i></a>
-                <a class="job-card data-engineer" data-detail="#data_engineer">数据工程师<i class="icon-jobs"></i></a>
-                <a class="job-card python-devops" data-detail="#python_devops">Python DevOps工程师<i class="icon-jobs"></i></a>
-              </div>
-            </div>
-            <div id="pagination_campus_dev" class="pagination"></div>
-          </section>
-          <section class="recruit-carousel" data-categ="非技术类">
-            <div id="carousel_campus_other">
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card market-manager" data-detail="#market_manager">市场经理<i class="icon-jobs"></i></a>
-                <a class="job-card bd-manager" data-detail="#bd_manager">BD经理/市场拓展经理<i class="icon-jobs"></i></a>
-                <a class="job-card customer-service" data-detail="#customer_service">客服专员<i class="icon-jobs"></i></a>
-                <a class="job-card marketing" data-detail="#marketing">营销助理<i class="icon-jobs"></i></a>
-              </div>
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card intern" data-detail="#intern">管理培训生<i class="icon-jobs"></i></a>
-              </div>
-            </div>
-            <div id="pagination_campus_other" class="pagination"></div>
-          </section>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Social Recruitment -->
-  <section class="recruitment social">
-    <div class="container">
-      <header class="recruit-header group">
-        <h1 class="recruit-title">社会招聘</h1>
-        <nav id="tab_nav_social" class="recruit-tab-nav"></nav>
+        <h1 class="recruit-title">热招职位</h1>
+        <nav id="tab_nav_recruit" class="recruit-tab-nav"></nav>
         <a class="recruit-detail recruit_detail" data-detail="#social_detail">社会招聘流程 &gt;&gt;</a>
       </header>
       <article class="recruit-tabs">
-        <div id="tab_social">
-          <section class="recruit-carousel" data-categ="技术类">
-            <div id="carousel_social_dev">
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card front-end" data-detail="#front_end">Web前端开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card back-end" data-detail="#social_back_end">Web后端开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card android-developer" data-detail="#android_developer">Android开发工程师<i class="icon-jobs"></i></a>
-                <a class="job-card ios-developer" data-detail="#ios_developer">iOS开发工程师<i class="icon-jobs"></i></a>
-              </div>
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card system-administrator" data-detail="#system_administrator">运维工程师<i class="icon-jobs"></i></a>
-                <a class="job-card data-engineer" data-detail="#data_engineer">数据工程师<i class="icon-jobs"></i></a>
-                <a class="job-card python-devops" data-detail="#python_devops">Python DevOps工程师<i class="icon-jobs"></i></a>
-                <a class="job-card product-design" data-detail="#product_design">产品设计师<i class="icon-jobs"></i></a>
-              </div>
-            </div>
-            <div id="pagination_social_dev" class="pagination"></div>
+        <div id="tab_recruit">
+          <section class="jobs_list recruit-carousel" data-categ="技术类">
+            <a class="job-card front-end" data-detail="#front_end">Web<br>前端开发工程师<i class="icon-jobs"></i></a>
+            <a class="job-card back-end" data-detail="#back_end">Web<br>后端开发工程师<i class="icon-jobs"></i></a>
+            <a class="job-card android-developer" data-detail="#android_developer">Android<br>开发工程师<i class="icon-jobs"></i></a>
+            <a class="job-card ios-developer" data-detail="#ios_developer">iOS<br>开发工程师<i class="icon-jobs"></i></a>
+            <a class="job-card system-administrator" data-detail="#system_administrator">运维工程师<i class="icon-jobs"></i></a>
+            <a class="job-card python-devops" data-detail="#python_devops">Python 工程师<i class="icon-jobs"></i></a>
           </section>
-          <section class="recruit-carousel" data-categ="非技术类">
-            <div id="carousel_social_other">
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card market-manager" data-detail="#market_manager">市场经理<i class="icon-jobs"></i></a>
-                <a class="job-card bd-manager" data-detail="#bd_manager">BD经理/市场拓展经理<i class="icon-jobs"></i></a>
-                <a class="job-card market-service" data-detail="#market_service">市场专员<i class="icon-jobs"></i></a>
-                <a class="job-card customer-service" data-detail="#customer_service">客服专员<i class="icon-jobs"></i></a>
-              </div>
-              <div class="jobs_list recruit-carousel-block">
-                <a class="job-card marketing" data-detail="#marketing">营销助理<i class="icon-jobs"></i></a>
-                <a class="job-card ui-design" data-detail="#ui_design">平面设计师<i class="icon-jobs"></i></a>
-              </div>
-            </div>
-            <div id="pagination_social_other" class="pagination"></div>
+          <section class="jobs_list recruit-carousel" data-categ="产品类">
+            <a class="job-card product-design" data-detail="#product_design">产品设计师<i class="icon-jobs"></i></a>
+            <a class="job-card product-operation" data-detail="#product_operation">产品运营<i class="icon-jobs"></i></a>
+          </section>
+          <section class="jobs_list recruit-carousel" data-categ="市场类">
+            <a class="job-card market-service" data-detail="#market_service">市场专员<i class="icon-jobs"></i></a>
+            <a class="job-card marketing" data-detail="#marketing">营销助理<i class="icon-jobs"></i></a>
+            <a class="job-card bd-manager" data-detail="#bd_manager">BD经理/市场拓展经理<i class="icon-jobs"></i></a>
+            <a class="job-card market-manager" data-detail="#market_manager">市场经理<i class="icon-jobs"></i></a>
+          </section>
+          <section class="jobs_list recruit-carousel" data-categ="设计类">
+            <a class="job-card ui-design" data-detail="#ui_design">平面设计师<i class="icon-jobs"></i></a>
+          </section>
+          <section class="jobs_list recruit-carousel" data-categ="职能类">
+            <a class="job-card customer-service" data-detail="#customer_service">客服专员<i class="icon-jobs"></i></a>
           </section>
         </div>
       </article>
@@ -491,34 +437,7 @@
                 </ul>
               </section>
             </article>
-            <article id="campus_back_end" class="job_detail hide">
-              <section class="modal-section">
-                <h3 class="subtitle">职位描述</h3>
-                <ul class="desc-list">
-                  <li>在项目经理的安排下高效和高质的完成功能代码的编写</li>
-                  <li>与同事结对编程，相互review代码，并对其代码负责</li>
-                  <li>找出一切可以提升网站性能和速度的方法，并着力实施</li>
-                  <li>devops，实时掌控线上代码的运行状态，并根据程序log优化代码</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">任职要求</h3>
-                <ul class="desc-list">
-                  <li>本科及以上学历，计算机相关专业，扎实的计算机基础知识</li>
-                  <li>1年以上web开发经验，至少熟悉python/php/thrift/MySQL/redis等web技术的其中一项</li>
-                  <li>理解并认同DRY/KISS/重构等基本的编程哲学，追求简洁优雅的代码风格</li>
-                  <li>熟悉linux的开发环境，熟悉常见的指令和shell脚本的编写</li>
-                  <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">工作地点</h3>
-                <ul class="desc-list">
-                  <li>上海</li>
-                </ul>
-              </section>
-            </article>
-            <article id="social_back_end" class="job_detail hide">
+            <article id="back_end" class="job_detail hide">
               <section class="modal-section">
                 <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
@@ -583,57 +502,24 @@
                 </ul>
               </section>
             </article>
-            <article id="data_engineer" class="job_detail hide">
-              <section class="modal-section">
-                <h3 class="subtitle">职位描述</h3>
-                <ul class="desc-list">
-                  <li>数据采集，整理，分析产品的开发和维护，确保数据正确性，可靠性</li>
-                  <li>优化数据平台各个环节，提升性能和速度</li>
-                  <li>为公司业务部门提供数据分析工具和相关报表</li>
-                  <li>为网站改进提供数据和分析支持</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">任职要求</h3>
-                <ul class="desc-list">
-                  <li>强烈的责任感和强烈的自我驱动意识。具备hack精神和钻研精神</li>
-                  <li>数据分析，数据仓库领域至少2年工作经验。熟悉数据系统开发的各个环节</li>
-                  <li>熟练使用至少一种关系型数据库（如mysql/postgresql），能熟练的编写SQL语句</li>
-                  <li>良好的数据敏感度，能进行熟练的数据分析，并从中提炼出有价值的趋势和规律</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">优先考虑</h3>
-                <ul class="desc-list">
-                  <li>完整参与过一个成功的数据平台的开发项目</li>
-                  <li>熟练使用python，或愿意学习python</li>
-                  <li>接受过统计学，机器学习，数据挖掘方面的专业训练</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">工作地点</h3>
-                <ul class="desc-list">
-                  <li>上海</li>
-                </ul>
-              </section>
-            </article>
             <article id="python_devops" class="job_detail hide">
               <section class="modal-section">
                 <h3 class="subtitle">职位描述</h3>
                 <ul class="desc-list">
                   <li>开发和维护网站后端SOA架构的相关服务，写出运维友好的代码，并为各个应用提供后端服务支持</li>
-                  <li>编写软件应用的自动化运维部署脚本</li>
-                  <li>从全局的角度分析优化系统的软硬件架构</li>
+                  <li>与同事结对编程，相互review代码，并对其代码负责</li>
+                  <li>devops，实时掌控线上代码的运行状态，并根据程序log优化代码</li>
                 </ul>
               </section>
               <section class="modal-section">
                 <h3 class="subtitle">任职要求</h3>
                 <ul class="desc-list">
-                  <li>强烈的责任感和强烈的自我驱动意识。具备hack精神和钻研精神</li>
+                  <li>强烈的责任感和强烈的自我驱动意识</li>
                   <li>至少2年linux使用经验，至少2年的python使用经验。能够敏捷，高效，准确的完成开发任务</li>
-                  <li>有良好的编程习惯，认同KISS和DRY代码风格，对高质量的代码有执着的追求</li>
-                  <li>对于后端的服务架构有基本的理解。能独立完成后端方面的各种任务</li>
-                  <li>良好的沟通能力和团队精神</li>
+                  <li>有良好的编程习惯，认同 KISS 和 DRY 代码风格，对高质量的代码有执着的追求</li>
+                  <li>理解devops，能兼顾开发和运维两方面，实时掌控线上程序的运行状态</li>
+                  <li>熟悉linux的开发环境，熟悉常见的指令和shell脚本的编写</li>
+                  <li>具备hack精神和钻研精神，常常活跃于国内外各大技术社区，研究各种优秀的项目</li>
                 </ul>
               </section>
               <section class="modal-section">
@@ -751,6 +637,34 @@
                 </ul>
               </section>
             </article>
+            <article id="product_operation" class="job_detail hide">
+              <section class="modal-section">
+                <ul class="desc-list">
+                  <li>承担产品与业务等部门的沟通和对接工作，整理汇总各类需求</li>
+                  <li>负责饿了么产品的各个渠道发布工作</li>
+                  <li>跟进产品上线以后的运营和数据分析优化</li>
+                  <li>针对产品制定运营策略和方案</li>
+                </ul>
+              </section>
+              <section class="modal-section">
+                <ul class="desc-list">
+                  <li>本科及以上学历，理工科专业更佳</li>
+                  <li>1年以上互联网产品运营工作经验，O2O/电商行业更佳</li>
+                  <li>热爱互联网，熟悉互联网及各种产品，了解移动互联网的各种渠道，媒体特性</li>
+                  <li>有良好的文字功底</li>
+                  <li>善于沟通，善于倾听，善于表达，善于协调各类资源</li>
+                  <li>具有很强的发现，分析，推动解决问题的能力，较强的责任行和执行力</li>
+                </ul>
+                <p>如果你觉得自己就是那个人或者努力成为这样的人，我们非常欢迎投递简历给我们，也可以在这里了解我们 <a href="http://weibo.com/eued" target="_blank">@饿了么UED</a> 。</p>
+                <p>【简历投递邮箱：<a href="mailto:ued.job@ele.me">ued.job@ele.me</a>（务必附上作品）】</p>
+              </section>
+              <section class="modal-section">
+                <h3 class="subtitle">工作地点</h3>
+                <ul class="desc-list">
+                  <li>上海</li>
+                </ul>
+              </section>
+            </article>
             <article id="marketing" class="job_detail hide">
               <section class="modal-section">
                 <h3 class="subtitle">岗位职责</h3>
@@ -771,29 +685,6 @@
                   <li>活跃的社交媒体使用者，对该领域有观察和实践的兴趣</li>
                   <li>有互联网行业或广告公司经验者优先，拥有传统和互动双重经验者更佳</li>
                   <li>有一技之长如视频、动画、漫画、设计、摄影、段子手优先</li>
-                </ul>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">工作地点</h3>
-                <ul class="desc-list">
-                  <li>上海</li>
-                </ul>
-              </section>
-            </article>
-            <article id="intern" class="job_detail hide">
-              <section class="modal-section">
-                <h3 class="subtitle">岗位类别：市场/营销类</h3>
-                <p>我们为你提供——各部门轮岗、系统课程培训、一对一导师带教。</p>
-              </section>
-              <section class="modal-section">
-                <h3 class="subtitle">岗位要求</h3>
-                <ul class="desc-list">
-                  <li>性别、专业不限</li>
-                  <li>学历：2014年的本科毕业生（全日制、一本）</li>
-                  <li>在校期间学习成绩优异，有学生会、社团或社会实践经验</li>
-                  <li>对市场敏感和敏锐，有个人独特的见解和想法</li>
-                  <li>性格开朗、积极主动、乐于学习</li>
-                  <li>吃苦耐劳、执行力强、善于沟通、具有团队合作精神</li>
                 </ul>
               </section>
               <section class="modal-section">
@@ -1112,7 +1003,7 @@
 
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
   <script src="js/plugins.js?v=2"></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

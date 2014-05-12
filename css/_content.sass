@@ -354,11 +354,8 @@ $scard-mv: 52px
  * 04 05 Recruitment
  */
 .recruitment
-  height: 888px
-  &.campus
-    background: #58b425
-  &.social
-    background: #9c58b6
+  padding-bottom: 100px
+  background: #9c58b6
 
 .recruit-header
   position: relative
@@ -392,34 +389,29 @@ $scard-mv: 52px
 .recruit-tabs
   margin-top: 50px
 
-
-$rcard-w: 550px
-$rcard-h: 235px
-$rcard-mh: 40px
-$rcard-mv: 27px
+$rcard-w: 360px
+$rcard-h: 170px
+$rcard-mv: 18px
+$rcard-mh: $page-width / 3 - $rcard-w
 
 .recruit-carousel
-  width: 100%
   overflow: hidden
-  padding-bottom: 50px
-  > .pagination
-    margin-top: 60px
-.recruit-carousel-block
-  float: left
-  float: left
-  width: ($rcard-w + $rcard-mh ) * 2
-  height: $rcard-h * 2 + $rcard-mv
+
+  width: $page-width
+  height: ($rcard-h + $rcard-mv) * 2
+  margin: 0 0 0 #{-$rcard-mh}
+
 .job-card
   +box-sizing
   position: relative
   float: left
-  margin: 0 ($rcard-mh - 2px * 3) ($rcard-mv - 2px * 2) 2px
-  width: 550px
-  height: 235px
-  padding: 40px 30px
+  margin: 0 0 $rcard-mv $rcard-mh
+  width: $rcard-w
+  height: $rcard-h
+  padding: 20px 15px
   border-radius: 2px
   box-shadow: 1px 1px 2px rgba(#000, 0.25)
-  font: 36px/1em $sans-serif
+  font: 36px/1.1 $sans-serif
   > .icon-jobs
     position: absolute
     bottom: 10px
@@ -444,12 +436,12 @@ $rcard-mv: 27px
     +styles(#198ae0, #1ea5f1, -330px -200px)
   &.system-administrator
     +styles(#26b1b6, #2ecdd2, -0px -290px)
-  &.data-engineer
-    +styles(#dfc324, #f3e22e, -110px -290px)
   &.python-devops
     +styles(#3079c8, #3e9be6, -220px -290px)
   &.product-design
-    +styles(#3c9400, #48b000, -330px -290px)
+    +styles(#3ec10d, #50e111, -330px -290px)
+  &.product-operation
+    +styles(#f4635e, #fb7872, -220px -380px)
   // other
   &.intern
     +styles(#e5c800, #f4e100, 0 -380px)
@@ -466,13 +458,12 @@ $rcard-mv: 27px
   +group
   width: 525px // (70 + 35) * 5
   overflow: hidden
-  &.campus > .flow-step
-    line-height: 70px
   &.social > .flow-step
     padding: 16px
     line-height: 18px
     &.middle
       padding: 25px 16px
+  
 .flow-step
   $line: #d9d9d9
   +box-sizing
@@ -557,6 +548,7 @@ $rcard-mv: 27px
   width: 520px
   &.social
     margin-left: 100px
+  
 .faq-section
   margin-bottom: 60px
   .list
