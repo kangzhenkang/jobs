@@ -1,4 +1,7 @@
+.sass-cache
 css/.sass-cache
+css/*.css
 js/vendor/superscrollorama
 js/vendor/carouFredSel
+js/*.min.js
 *.pyc

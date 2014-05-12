@@ -1,5 +1,6 @@
 from fabric.api import (
     local,
+    execute,
     env,
     sudo,
 )
@@ -10,7 +11,13 @@ env.use_ssh_config = True
 env.hosts = ['pg-misc-0']
 
 
+def compress():
+    local("sass --update -t compressed css/main.sass:css/main.min.css")
+    local("uglifyjs js/main.js > js/main.min.js")
+
+
 def deploy():
+    execute(compress)
     pwd = os.getcwd()
     sudo("chown {} -R /srv/www/jobs.ele.me/".format(env.user))
     local('rsync -az --exclude-from=rsync_exclude.conf --progress '

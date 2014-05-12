@@ -27,7 +27,11 @@ $rocket-xs: url("../img/main/rocket-xs.png") no-repeat
 @import '_content.sass'
 @import '_ending.sass'
 
-.lt-ie9 .browsehappy
+.browsehappy
+  display: none
+
+.no-rgba .browsehappy
+  display: block
   background: #f60
   text-align: center
   font-size: 14px
