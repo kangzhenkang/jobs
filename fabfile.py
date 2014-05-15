@@ -13,6 +13,7 @@ env.hosts = ['pg-misc-0']
 
 def compress():
     local("sass --update -t compressed css/main.sass:css/main.min.css")
+    local("uglifyjs js/plugins.js > js/plugins.min.js")
     local("uglifyjs js/main.js > js/main.min.js")
 
 
