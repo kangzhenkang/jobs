@@ -418,6 +418,7 @@ $rcard-mh: $page-width / 3 - $rcard-w
       background: $bg-hover
     > .icon-jobs
       background-position: $position
+
   // dev
   &.front-end
     +styles(#ed8900, #f8a400, 0 -200px)
@@ -431,21 +432,38 @@ $rcard-mh: $page-width / 3 - $rcard-w
     +styles(#26b1b6, #2ecdd2, -0px -290px)
   &.python-devops
     +styles(#3079c8, #3e9be6, -220px -290px)
+
+  // ued
   &.product-design
     +styles(#3ec10d, #50e111, -330px -290px)
   &.product-operation
     +styles(#f4635e, #fb7872, -220px -380px)
+
+  // market
+  &.bd-manager,
+  &.market-manager
+    +styles(#3fa7dc, #4dc5f0, -110px -380px)
+  &.market-service,
+  &.marketing
+    +styles(#0f94d7, #13b7ee, -220px -380px)
+  &.sem-service
+    +styles(#f90, lighten(#f90, 10%), -110px -470px)
+  &.marketing-manager
+    +styles(#dc5838, lighten(#dc5838, 10%), -330px -470px)
+
+  // design
+  &.design,
+  &.design-pro,
+  &.design-intern
+    +styles(#43c879, #51e192, 0px -470px)
+
   // other
   &.intern
     +styles(#e5c800, #f4e100, 0 -380px)
-  &.bd-manager, &.market-manager
-    +styles(#3fa7dc, #4dc5f0, -110px -380px)
-  &.market-service, &.marketing
-    +styles(#0f94d7, #13b7ee, -220px -380px)
   &.customer-service
     +styles(#da5834, #ee6a3f, -330px -380px)
-  &.ui-design
-    +styles(#43c879, #51e192, 0px -470px)
+  &.pr-manager
+    +styles(#41c660, lighten(#41c660, 10%), -220px -470px)
 
 .recruit-flow
   +group
